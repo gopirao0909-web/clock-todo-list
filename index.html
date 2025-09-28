@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock & To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyClock</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Clock Section -->
+  <div class="clock-container">
+    <div id="clock"></div>
+  </div>
+
+  <!-- To-Do List Section -->
+  <div class="todo-container">
+    <h2>📝 My To-Do List</h2>
+    <div class="todo-input">
+      <input type="text" id="taskInput" placeholder="Enter your task...">
+      <button id="addTask">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

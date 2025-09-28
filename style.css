@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  animation: slideDown 1s ease;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+/* Clock */
+.clock-container {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock {
+  font-size: 5rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 60px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  color: #00d4ff;
+  animation: glowPulse 2s infinite alternate;
+}
+
+/* To-Do List */
+.todo-container {
+  max-width: 600px;
+  margin: 20px auto 50px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.2s ease;
+}
+
+.todo-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00d4ff;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.todo-input input:focus {
+  transform: scale(1.03);
+}
+
+.todo-input button {
+  padding: 12px 20px;
+  background: #00d4ff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-input button:hover {
+  background: #009ecb;
+  transform: scale(1.05);
+}
+
+#taskList {
+  list-style: none;
+  margin-top: 20px;
+}
+
+#taskList li {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.5s forwards;
+}
+
+#taskList li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+  background: rgba(0, 212, 255, 0.15);
+  transition: background 0.5s ease, opacity 0.5s ease;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.task-actions button:hover {
+  transform: scale(1.1);
+}
+
+.complete-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 15px #00d4ff, 0 0 25px #00d4ff;
+  }
+  to {
+    box-shadow: 0 0 30px #00d4ff, 0 0 45px #00d4ff;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+
+.task-actions button {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.complete-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+.complete-btn:hover {
+  background: #1e7e34;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #b02a37;
+}
